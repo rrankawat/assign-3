@@ -1,4 +1,4 @@
-# Assignment - 2
+# Assignment - 3
 
 > Command To run:
-> npm start
+> npm run dev
