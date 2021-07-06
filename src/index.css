@@ -1,3 +1,13 @@
+ul {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+li {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
 table,
 th,
 td {
