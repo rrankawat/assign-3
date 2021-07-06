@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React, { Component } from 'react'
 import IssuesList from '../components/IssuesList'
 
-const AllIssuesPage = () => {
-  const [issues, setIssues] = useState([])
+class AllIssuesPage extends Component {
+  state = {
+    issues: [],
+  }
 
-  useEffect(() => {
-    const getIssues = async () => {
-      const res = await fetch('/issues')
-      const data = await res.json()
-      setIssues(data)
-    }
-    getIssues()
-  }, [])
+  async componentDidMount() {
+    const res = await fetch('/issues')
+    const data = await res.json()
+    this.setState({ issues: data })
+  }
 
-  return (
-    <>
-      <h1>Issue List</h1>
-      <IssuesList issues={issues} />
-    </>
-  )
+  render() {
+    return (
+      <>
+        <h1>Issue List</h1>
+        <IssuesList issues={this.state.issues} />
+      </>
+    )
+  }
 }
 
 export default AllIssuesPage

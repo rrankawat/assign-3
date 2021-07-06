@@ -1,6 +1,6 @@
-import React from 'react';
-import Issue from './Issue';
-import PropTypes from 'prop-types';
+import React from 'react'
+import Issue from './Issue'
+import PropTypes from 'prop-types'
 
 const IssuesList = ({ issues }) => {
   return (
@@ -20,11 +20,11 @@ const IssuesList = ({ issues }) => {
         ))}
       </tbody>
     </table>
-  );
-};
+  )
+}
 
 IssuesList.propTypes = {
   issues: PropTypes.array.isRequired,
-};
+}
 
-export default IssuesList;
+export default IssuesList
